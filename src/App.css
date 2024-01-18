@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+
+:root {
+  --font-roboto: "Roboto Slab", serif;
+  --font-raleway: "Raleway", sans-serif;
+}
+
+body {
+  @apply bg-neutral-800;
+  font-family: var(--font-roboto);
+}
+.search {
+  /* https://www.joshwcomeau.com/shadow-palette/ */
+  --shadow-color: 0deg 0% 5%;
+  --shadow-elevation-medium: 0.2px 0.5px 0.6px hsl(var(--shadow-color) / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+    2px 4.1px 5.1px -1.7px hsl(var(--shadow-color) / 0.36),
+    4.9px 9.9px 12.4px -2.5px hsl(var(--shadow-color) / 0.36);
+  box-shadow: var(--shadow-elevation-medium);
+}
+
+.search input {
+  font-family: var(--font-raleway);
+}
+
+.empty h2 {
+  font-family: var(--font-raleway);
+}
+
+.movie div:nth-of-type(3) span {
+  font-family: "Raleway", sans-serif;
+}
+
+.movie div:nth-of-type(3) h3 {
+  font-family: "Roboto Slab", serif;
+}
+
+@media screen and (max-width: 600px) {
+  .app {
+    padding: 4rem 2rem;
+  }
+
+  .search {
+    padding: 1rem 1.75rem;
+    width: 100%;
+  }
+
+  .search input {
+    font-size: 1rem;
+  }
+
+  .search img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .app {
+    padding: 4rem 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    margin-top: 2rem;
+  }
+
+  .movie {
+    width: "100%";
+    margin: 1rem;
+  }
+}
